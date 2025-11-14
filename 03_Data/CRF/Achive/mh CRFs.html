@@ -1,0 +1,605 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG9C02THQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-GG9C02THQ7");
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mh CRFs </title>
+    <link rel="stylesheet" href="./styles/mycsg.css">
+    <script src="./scripts/mycsg.js"></script>   
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.3/js/dataTables.fixedColumns.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.2.2/css/fixedHeader.dataTables.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    
+    <link rel="stylesheet" type="text/css" href="./styles/prism.css">
+    <script src="./scripts/prism.js" data-manual></script> 
+    <script src="./vendor/tinymce/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+   tinymce.init({
+     selector: '.myeditablelessondiv',
+     plugins: 'table autoresize autosave codesample preview wordcount code emoticons link image lists advlist media insertdatetime template visualblocks help',
+     toolbar: 'template | undo redo | styles | hr | forecolor backcolor | bold italic | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | link image media| code | visualblocks'
+   });
+ </script>
+    <style>
+   
+    .resizeable-column {
+      resize: horizontal; /* Allow the user to resize horizontally */
+      overflow: auto; /* Add scrollbars if the content overflows */
+    }
+        
+		.frame {
+			height: 500px; /* adjust height as needed */
+			   
+    hr { 
+      margin: 0em;
+    } 
+
+    input[type="radio"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+      margin: 10;
+    }
+
+    input[type="checkbox"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+    }
+        
+    .answer_explanation_toggle_wrapper    
+    {
+            
+    }    
+    #answer_explanation 
+    {
+        margin-top: 0px;  
+        margin-bottom: 30px; 
+        background: gray;
+        width: auto; height: 50px;
+    }
+    .buttontags {
+      border-radius: 100px; /* Adjust the value to control the roundness of the corners */
+      opacity: 0.1; /* Adjust the value to control the greyed-out appearance */
+      pointer-events: none; /* Disable pointer events to make the button non-clickable */
+    }
+
+    <style>
+  /* Custom striped table colors */
+  .table-striped-concepts tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Light gray color */
+  }
+  
+  .table-striped-concepts tbody tr:nth-of-type(even) {
+    background-color: goldenyellow; /* Dark gray color */
+  }
+</style>
+
+    </style>
+
+    <script>
+    $( "button.crf-sdtm-anno-toggle" ).click(function() {
+       $( this ).next(".crf-sdtm-anno-toggle").toggle();     
+    
+    });
+        </script>   
+</head>
+<body>
+
+<div class="container-fluid sticky-top m-0 p-0">
+  <div class="row h-5 p-0 m-0 d-flex-row">
+    <div class="col-12 bg-dark p-0 m-0">
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-0 px-3 m-0">
+    <a class="navbar-brand" href="index.php">mycsg.in</a>
+    <button class="navbar-toggler center" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+      
+    <!-- <li class="nav-item">	<a class="nav-link" href="posts_display.php ">Posts</a></li>  -->
+    <li class="nav-item">   <a class="nav-link" href="sas.php ">SAS</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="sasnr.php ">SASnR</a>  </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="clinicalProgrammingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Clinical Programming
+        </a>
+        <div class="dropdown-menu" aria-labelledby="clinicalProgrammingDropdown">
+        <a class="dropdown-item" href="crfs.php">CRFs</a>
+        <a class="dropdown-item" href="sdtm.php">SDTM</a>
+        <a class="dropdown-item" href="adam.php">ADaM</a>
+        <a class="dropdown-item" href="tfl.php">TFL</a>
+        <a class="dropdown-item" href="tasks.php">Tasks</a>  
+        <a class="dropdown-item" href="macros.php">Macros</a> 
+              
+        </div>
+    </li>
+    <li class="nav-item">   <a class="nav-link" href="qna.php ">QnA</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="quiz.php ">Certification</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="resources.php ">Resources</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="disclaimer.php ">Disclaimer</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="contact us.php ">Contact Us</a>  </li> 
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center justify-content-start" href="training.php">
+        <span>Training</span>
+        <span class="badge badge-danger ml-1">2</span>
+      </a>
+    </li>
+
+    
+    </ul>
+    <ul class="nav navbar-nav navbar-right ml-auto">
+    
+        <li class="nav-item">
+            <a class="nav-link">Hi Daniel355!</a>
+        </li> 
+
+        
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">Log out</a>
+      </li> 
+      </ul>
+    </div>
+    </div>
+    </nav>
+    
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="container " >
+            <h2 class="text-center">Example Case Report Forms for MH domain</h2>
+    
+        <!-- Nav tabs -->
+    <ul class="nav nav-tabs" style="background-color:  #ccffe6;" id="formTabs" role="tablist">
+                    <li class="nav-item">
+                <a class="nav-link active" id="formoid-medhis-tab" data-toggle="tab" href="#formoid-medhis" role="tab" aria-controls="formoid-medhis" aria-selected="true">
+                    Ex 1: medhis                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-mh801_1-tab" data-toggle="tab" href="#formoid-mh801_1" role="tab" aria-controls="formoid-mh801_1" aria-selected="false">
+                    Ex 2: mh801_1                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-mh801_2-tab" data-toggle="tab" href="#formoid-mh801_2" role="tab" aria-controls="formoid-mh801_2" aria-selected="false">
+                    Ex 3: mh801_2                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-mh801_3-tab" data-toggle="tab" href="#formoid-mh801_3" role="tab" aria-controls="formoid-mh801_3" aria-selected="false">
+                    Ex 4: mh801_3                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-mh_anemia-tab" data-toggle="tab" href="#formoid-mh_anemia" role="tab" aria-controls="formoid-mh_anemia" aria-selected="false">
+                    Ex 5: mh_anemia                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-mh_ckd-tab" data-toggle="tab" href="#formoid-mh_ckd" role="tab" aria-controls="formoid-mh_ckd" aria-selected="false">
+                    Ex 6: mh_ckd                </a>
+            </li>
+            </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+                    <div class="tab-pane fade show active" id="formoid-medhis" role="tabpanel" aria-labelledby="formoid-medhis-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: General Medical History</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                    <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Medical History Verbatim</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHTERM</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Approximate start date of condition</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Outcome of the condition</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Recovered/Resolved"> Recovered/Resolved</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Not Recovered/Not Resolved"> Not Recovered/Not Resolved</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHOUT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Approximate date of recovery from the condition</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHENDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Severity of the condition</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mild"> Mild</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Moderate"> Moderate</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Severe"> Severe</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHSEV</p></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-mh801_1" role="tabpanel" aria-labelledby="formoid-mh801_1-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Diabetes History</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                        <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Collection Date</td>
+                                    <td><input type="text" name="mh801_1.MHDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of Diagnosis of Diabetes?</td>
+                                    <td><input type="text" name="mh801_1.MHSTDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Type of Diabetes</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_1.MHTERM" value="Type 1 Diabetes"> Type 1 Diabetes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_1.MHTERM" value="Type 2 Diabetes"> Type 2 Diabetes</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHTERM</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MHCAT=""DIABETES"".</br>As this form is collecting prespecified information, we need to populate MHPRESP as ""Y"". Also, as all subjects are expected to have Diabetes in this study, populate MHOCCUR=""Y"" for all records coming from this page."</p></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-mh801_2" role="tabpanel" aria-labelledby="formoid-mh801_2-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Diabetes Complications</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Collection Date</td>
+                                    <td><input type="text" name="mh801_1.MHDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Diabetic Retinopathy</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MH.MHTERM</br> MH.MHPRESP=""Y""</br> MHOCCUR"</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Neuropathy</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MH.MHTERM</br> MH.MHPRESP=""Y""</br> MHOCCUR"</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Nephropathy</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MH.MHTERM</br> MH.MHPRESP=""Y""</br> MHOCCUR"</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Peripheral Vascular Disease</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MH.MHTERM</br> MH.MHPRESP=""Y""</br> MHOCCUR"</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Diabetic Ketoacidosis</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_2.MHTERM&lt;/br&gt; mh801_2.MHOCCUR" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MH.MHTERM</br> MH.MHPRESP=""Y""</br> MHOCCUR"</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of Diagnosis</td>
+                                    <td><input type="text" name="mh801_2.MHSTDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MHCAT=""DIABETES"", MHSCAT=""COMPLICATIONS"""</p></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-mh801_3" role="tabpanel" aria-labelledby="formoid-mh801_3-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: General Medical History</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Collection Date</td>
+                                    <td><input type="text" name="mh801_3.MHDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Medical History Verbatim</td>
+                                    <td><input type="text" name="mh801_3.MHTERM">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHTERM</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Start Date</td>
+                                    <td><input type="text" name="mh801_3.MHSTDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>End Date</td>
+                                    <td><input type="text" name="mh801_3.MHENDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHENDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Ongoing</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_3.MHONGO" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="mh801_3.MHONGO" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"As this page is intended to collect the general medical history, set MHCAT=""GENERAL"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-mh_anemia" role="tabpanel" aria-labelledby="formoid-mh_anemia-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Anemia History</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Medical Condition</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHTERM</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of diagnosis</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Did the patient have any symptoms of Anemia in</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>NOT SUBMITTED</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Shortness of breath</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"FA.FACAT=""ANEMIA HISTORY""</br> FA.FAOBJ=""ANEMIA""</br> FA.FAORRES when FA.FATESTCD=""SHRTBRTH"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Fatigue</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"FA.FACAT=""ANEMIA HISTORY""</br> FA.FAOBJ=""ANEMIA""</br> FA.FAORRES when FA.FATESTCD=""FATIGUE"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Other symptoms</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"FA.FACAT=""ANEMIA HISTORY""</br> FA.FAOBJ=""ANEMIA""</br> FA.FAORRES when FA.FATESTCD=""OTHSYM"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>If 'Other', specify</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"FA.FACAT=""ANEMIA HISTORY""</br> FA.FAOBJ=""ANEMIA""</br> FA.FAORRES when FA.FATESTCD=""OTHSYMSP"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                            </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-mh_ckd" role="tabpanel" aria-labelledby="formoid-mh_ckd-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Chronic Kidney Diseaase History</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Medical Condition</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"MH.MHTERM=""CHRONIC KIDNEY DISEASE"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of diagnosis</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>MH.MHSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Stage of Chronic Kidney Disease</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="STAGE 3"> STAGE 3</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="STAGE 4"> STAGE 4</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="STAGE 5"> STAGE 5</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"FA.FACAT=""CHRONIC KIDNEY DISEASE HISTORY""</br> FA.FAOBJ=""CHRONIC KIDNEY DISEASE""</br> FA.FAORRES when FA.FATESTCD=""STAGE"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>What is the likely etiology of CKD?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="DIABETIC NEPHROPATHY"> DIABETIC NEPHROPATHY</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="HYPERTENSIVE NEPHROPATHY"> HYPERTENSIVE NEPHROPATHY</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="IDIOPATHIC NEPHROPATHY"> IDIOPATHIC NEPHROPATHY</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"FA.FACAT=""CHRONIC KIDNEY DISEASE HISTORY""</br> FA.FAOBJ=""CHRONIC KIDNEY DISEASE""</br> FA.FAORRES when FA.FATESTCD=""CKDET"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                                                        </tbody>
+                </table>
+                </div>
+            </div>
+                
+    </div>
+
+<script>
+    $(document).ready(function(){
+        // Initialize Bootstrap tabs
+        $('#formTabs a').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+
+<script>
+$(document).ready(function() {
+    $("button.crf-sdtm-anno-toggle").click(function() {
+        // If the element to toggle is not the next sibling, adjust the selector accordingly.
+        // For example, if it's a child, use $(this).find(".crf-sdtm-anno-toggle").toggle();
+        // If it's elsewhere, you might need a more specific selector based on your HTML structure.
+        $(this).next(".crf-sdtm-anno-toggle").toggle();
+    });
+});
+</script>

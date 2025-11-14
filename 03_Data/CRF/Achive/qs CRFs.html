@@ -1,0 +1,1081 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG9C02THQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-GG9C02THQ7");
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qs CRFs </title>
+    <link rel="stylesheet" href="./styles/mycsg.css">
+    <script src="./scripts/mycsg.js"></script>   
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.3/js/dataTables.fixedColumns.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.2.2/css/fixedHeader.dataTables.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    
+    <link rel="stylesheet" type="text/css" href="./styles/prism.css">
+    <script src="./scripts/prism.js" data-manual></script> 
+    <script src="./vendor/tinymce/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+   tinymce.init({
+     selector: '.myeditablelessondiv',
+     plugins: 'table autoresize autosave codesample preview wordcount code emoticons link image lists advlist media insertdatetime template visualblocks help',
+     toolbar: 'template | undo redo | styles | hr | forecolor backcolor | bold italic | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | link image media| code | visualblocks'
+   });
+ </script>
+    <style>
+   
+    .resizeable-column {
+      resize: horizontal; /* Allow the user to resize horizontally */
+      overflow: auto; /* Add scrollbars if the content overflows */
+    }
+        
+		.frame {
+			height: 500px; /* adjust height as needed */
+			   
+    hr { 
+      margin: 0em;
+    } 
+
+    input[type="radio"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+      margin: 10;
+    }
+
+    input[type="checkbox"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+    }
+        
+    .answer_explanation_toggle_wrapper    
+    {
+            
+    }    
+    #answer_explanation 
+    {
+        margin-top: 0px;  
+        margin-bottom: 30px; 
+        background: gray;
+        width: auto; height: 50px;
+    }
+    .buttontags {
+      border-radius: 100px; /* Adjust the value to control the roundness of the corners */
+      opacity: 0.1; /* Adjust the value to control the greyed-out appearance */
+      pointer-events: none; /* Disable pointer events to make the button non-clickable */
+    }
+
+    <style>
+  /* Custom striped table colors */
+  .table-striped-concepts tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Light gray color */
+  }
+  
+  .table-striped-concepts tbody tr:nth-of-type(even) {
+    background-color: goldenyellow; /* Dark gray color */
+  }
+</style>
+
+    </style>
+
+    <script>
+    $( "button.crf-sdtm-anno-toggle" ).click(function() {
+       $( this ).next(".crf-sdtm-anno-toggle").toggle();     
+    
+    });
+        </script>   
+</head>
+<body>
+
+<div class="container-fluid sticky-top m-0 p-0">
+  <div class="row h-5 p-0 m-0 d-flex-row">
+    <div class="col-12 bg-dark p-0 m-0">
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-0 px-3 m-0">
+    <a class="navbar-brand" href="index.php">mycsg.in</a>
+    <button class="navbar-toggler center" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+      
+    <!-- <li class="nav-item">	<a class="nav-link" href="posts_display.php ">Posts</a></li>  -->
+    <li class="nav-item">   <a class="nav-link" href="sas.php ">SAS</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="sasnr.php ">SASnR</a>  </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="clinicalProgrammingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Clinical Programming
+        </a>
+        <div class="dropdown-menu" aria-labelledby="clinicalProgrammingDropdown">
+        <a class="dropdown-item" href="crfs.php">CRFs</a>
+        <a class="dropdown-item" href="sdtm.php">SDTM</a>
+        <a class="dropdown-item" href="adam.php">ADaM</a>
+        <a class="dropdown-item" href="tfl.php">TFL</a>
+        <a class="dropdown-item" href="tasks.php">Tasks</a>  
+        <a class="dropdown-item" href="macros.php">Macros</a> 
+              
+        </div>
+    </li>
+    <li class="nav-item">   <a class="nav-link" href="qna.php ">QnA</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="quiz.php ">Certification</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="resources.php ">Resources</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="disclaimer.php ">Disclaimer</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="contact us.php ">Contact Us</a>  </li> 
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center justify-content-start" href="training.php">
+        <span>Training</span>
+        <span class="badge badge-danger ml-1">2</span>
+      </a>
+    </li>
+
+    
+    </ul>
+    <ul class="nav navbar-nav navbar-right ml-auto">
+    
+        <li class="nav-item">
+            <a class="nav-link">Hi Daniel355!</a>
+        </li> 
+
+        
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">Log out</a>
+      </li> 
+      </ul>
+    </div>
+    </div>
+    </nav>
+    
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="container " >
+            <h2 class="text-center">Example Case Report Forms for QS domain</h2>
+    
+        <!-- Nav tabs -->
+    <ul class="nav nav-tabs" style="background-color:  #ccffe6;" id="formTabs" role="tablist">
+                    <li class="nav-item">
+                <a class="nav-link active" id="formoid-eq5d3l-tab" data-toggle="tab" href="#formoid-eq5d3l" role="tab" aria-controls="formoid-eq5d3l" aria-selected="true">
+                    Ex 1: eq5d3l                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-eq5d5l-tab" data-toggle="tab" href="#formoid-eq5d5l" role="tab" aria-controls="formoid-eq5d5l" aria-selected="false">
+                    Ex 2: eq5d5l                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-mmse-tab" data-toggle="tab" href="#formoid-mmse" role="tab" aria-controls="formoid-mmse" aria-selected="false">
+                    Ex 3: mmse                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-qs_ecog-tab" data-toggle="tab" href="#formoid-qs_ecog" role="tab" aria-controls="formoid-qs_ecog" aria-selected="false">
+                    Ex 4: qs_ecog                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-qs_haqdi-tab" data-toggle="tab" href="#formoid-qs_haqdi" role="tab" aria-controls="formoid-qs_haqdi" aria-selected="false">
+                    Ex 5: qs_haqdi                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-sf36-tab" data-toggle="tab" href="#formoid-sf36" role="tab" aria-controls="formoid-sf36" aria-selected="false">
+                    Ex 6: sf36                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-wpai_ans-tab" data-toggle="tab" href="#formoid-wpai_ans" role="tab" aria-controls="formoid-wpai_ans" aria-selected="false">
+                    Ex 7: wpai_ans                </a>
+            </li>
+            </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+                    <div class="tab-pane fade show active" id="formoid-eq5d3l" role="tabpanel" aria-labelledby="formoid-eq5d3l-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: EQ-5D-3L</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                    <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date Collected</td>
+                                    <td><input type="text" name="eq5d3l.DT_RAW">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Perfomed</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.STAT" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.STAT" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSSTAT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Reason if not performed</td>
+                                    <td><input type="text" name="eq5d3l.REASND">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSREASND</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Mobility</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D01" value="I have no problems in walking about"> I have no problems in walking about</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D01" value="I have some problems in walking about"> I have some problems in walking about</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D01" value="I am confined to bed"> I am confined to bed</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D101"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Self-care</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D02" value="I have no problems with self-care"> I have no problems with self-care</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D02" value="I have some problems washing or dressing myself"> I have some problems washing or dressing myself</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D02" value="I am unable to wash or dress myself"> I am unable to wash or dress myself</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D102"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Usual activities</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D03" value="I have no problems with performing my usual activities"> I have no problems with performing my usual activities</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D03" value="I have some problems with performing my usual activities"> I have some problems with performing my usual activities</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D03" value="I am unable to perform my usual activities"> I am unable to perform my usual activities</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D103"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Pain/Discomfort</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D04" value="I have no pain or discomfort"> I have no pain or discomfort</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D04" value="I have moderate pain or discomfort"> I have moderate pain or discomfort</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D04" value="I have extreme pain or discomfort"> I have extreme pain or discomfort</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D104"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Anxiety/Depression</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D05" value="I am not anxious or depressed"> I am not anxious or depressed</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D05" value="I am moderately anxious or depressed"> I am moderately anxious or depressed</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d3l.EQ5D05" value="I am extremely anxious or depressed"> I am extremely anxious or depressed</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D105"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Health state Visual Analog Score</td>
+                                    <td><input type="text" name="eq5d3l.EQ5D06">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D106"""</p></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-eq5d5l" role="tabpanel" aria-labelledby="formoid-eq5d5l-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: EQ-5D-5L</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date Collected</td>
+                                    <td><input type="text" name="eq5d5l.DT_RAW">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Perfomed</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.STAT" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.STAT" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSSTAT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Reason if not performed</td>
+                                    <td><input type="text" name="eq5d5l.REASND">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSREASND</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Mobility</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D01" value="I have no problems walking"> I have no problems walking</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D01" value="I have slight problems walking"> I have slight problems walking</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D01" value="I have moderate problems walking"> I have moderate problems walking</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D01" value="I have severe problems walking"> I have severe problems walking</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D01" value="I am unable to walk"> I am unable to walk</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D201"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Self-care</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D02" value="I have no problems washing or dressing myself"> I have no problems washing or dressing myself</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D02" value="I have slight problems washing or dressing myself"> I have slight problems washing or dressing myself</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D02" value="I have moderate problems washing or dressing myself"> I have moderate problems washing or dressing myself</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D02" value="I have severe problems washing or dressing myself"> I have severe problems washing or dressing myself</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D02" value="I am unable to wash or dress myself"> I am unable to wash or dress myself</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D202"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Usual activities</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D03" value="I have no problems doing my usual activities"> I have no problems doing my usual activities</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D03" value="I have slight problems doing my usual activities"> I have slight problems doing my usual activities</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D03" value="I have moderate problems doing my usual activities"> I have moderate problems doing my usual activities</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D03" value="I have severe problems doing my usual activities"> I have severe problems doing my usual activities</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D03" value="I am unable to do my usual activities"> I am unable to do my usual activities</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D203"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Pain/Discomfort</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D04" value="I have no pain or discomfort"> I have no pain or discomfort</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D04" value="I have slight pain or discomfort"> I have slight pain or discomfort</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D04" value="I have moderate pain or discomfort"> I have moderate pain or discomfort</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D04" value="I have severe pain or discomfort"> I have severe pain or discomfort</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D04" value="I have extreme pain or discomfort"> I have extreme pain or discomfort</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D204"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Anxiety/Depression</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D05" value="I am not anxious or depressed"> I am not anxious or depressed</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D05" value="I am slightly anxious or depressed"> I am slightly anxious or depressed</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D05" value="I am moderately anxious or depressed"> I am moderately anxious or depressed</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D05" value="I am severely anxious or depressed"> I am severely anxious or depressed</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="eq5d5l.EQ5D05" value="I am extremely anxious or depressed"> I am extremely anxious or depressed</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D205"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Health state Visual Analog Score</td>
+                                    <td><input type="text" name="eq5d5l.EQ5D06">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QS.QSORRES when QS.QSTESTCD=""EQ5D206"""</p></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-mmse" role="tabpanel" aria-labelledby="formoid-mmse-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Mini-Mental State Examination Summary</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>A. Orientation - Time (Range of</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>A. Orientation - Place (Range of</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>B. Registration (Range of score</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>C. Attention and Calculation (Ra</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>D. Recall (Range of score is 0 t</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>E. Language (Range of score is 0</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Sum of scores for Sections A thr</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-qs_ecog" role="tabpanel" aria-labelledby="formoid-qs_ecog-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: ECOG Performacne Status</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of assessment</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Subject ECOG status</td>
+                                    <td>Grade 0: Fully active, able to carry on all pre-disease performance without restriction|Grade 1: Restricted in physically</td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"QSCAT=""EOCG"""</p></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-qs_haqdi" role="tabpanel" aria-labelledby="formoid-qs_haqdi-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Health Assessment Questionnaire - Disability Index</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of assessment</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dressing & Grooming</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dress yourself, including tying</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Shampoo your hair?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Arising</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Stand up from an armless chair?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Get in and out of bed?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Eating</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Cut up your own meat?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Lift a full cup or glass to your</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Open a new carton of milk (or so</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Walking</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Walk outdoors on flat ground?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Climb up five steps?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>AIDS or DEVICES that you usually</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Devices used for Dressing (butto</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Cane (W)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Walking Frame (W)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Crutches (W)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Wheel Chair (W)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Special or built up chair (A)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Built up or special utensils (E)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Any other devices used?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Specify if any other device is u</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Any categories for which help is</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dressing and Grooming</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Arising</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Eating</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Walking</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Hygiene</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Wash and dry your entire body?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Take a bath?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Get on and off the toilet?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Reach</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Reach and get down a 5 lb object</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Bend down to pick up clothing of</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Grip</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Open car doors?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Open jars which have been previo</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Turn taps on and off?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Activities</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Run errands and shop?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Get in and out of a car?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Do chores such as vacuuming, hou</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Without ANY difficulty"> Without ANY difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With SOME difficulty"> With SOME difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="With MUCH difficulty"> With MUCH difficulty</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="UNABLE to do"> UNABLE to do</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>any AIDS or DEVICES that you usu</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Raised toilet seat (H)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Bath seat (H)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Bath rail (H)</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Long-handled appliances for reac</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Jar opener (for jars previously</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Any categories for which help is</td>
+                                    <td></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Hygiene</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Reach</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Gripping and opening things</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Errands or housework</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>how well you are doing on a scal</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>How much pain have you had IN TH</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-sf36" role="tabpanel" aria-labelledby="formoid-sf36-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: SF 36 Health Survey</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of assessment</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>QS.QSDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>1. In general, would you say you</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Excellent"> Excellent</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Very Good"> Very Good</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Good"> Good</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Fair"> Fair</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Poor"> Poor</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>2. Compared to one year ago, how</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Much better now than one year ago"> Much better now than one year ago</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Somewhat better now than one year ago"> Somewhat better now than one year ago</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="About the same as one year ago"> About the same as one year ago</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Somewhat worse now than one year ago"> Somewhat worse now than one year ago</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Much worse now than one year ago"> Much worse now than one year ago</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.a. Vigorous activities, such a</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.b. Moderate activities, such a</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.c. Lifting or carrying groceri</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.d. Climbing several flights of</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.e. Climbing one flight of stai</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.f. Bending, kneeling, or stoop</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.g. Walking more than a mile</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.h. Walking several hundred yar</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.i. Walking one hundred yards</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3.j. Bathing or dressing yoursel</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a lot"> Yes, limited a lot</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes, limited a little"> Yes, limited a little</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No, not limited at all"> No, not limited at all</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>4.a. Cut down on the amount of t</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>4.b. Accomplished less than you</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>4.c. Were limited in the kind of</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>4.d. Had difficulty performing t</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>5.a. Cut down on the amount of t</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>5.b. Accomplished less than you</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>5.c. Didn't do work or other act</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>6. During the past 4 weeks, to w</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Not at all"> Not at all</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Slightly"> Slightly</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Moderately"> Moderately</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Quite a bit"> Quite a bit</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Extremely"> Extremely</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>7. How much bodily pain have you</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None"> None</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Very mild"> Very mild</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mild"> Mild</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Moderate"> Moderate</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Severe"> Severe</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Very severe"> Very severe</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>8. During the past 4 weeks, how</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Not at all"> Not at all</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Slightly"> Slightly</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Moderately"> Moderately</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Quite a bit"> Quite a bit</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Extremely"> Extremely</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.a. Did you feel full of life?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.b. Have you been very nervous?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.c. Have you felt so down in th</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.d. Have you felt calm and peac</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.e. Did you have a lot of energ</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.f. Have you felt downhearted a</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.g. Did you feel worn out?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.h. Have you been happy?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>9.i. Did you feel tired?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>10. During the past 4 weeks, how</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="All of the time"> All of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Most of the time"> Most of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Some of the time"> Some of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="A little of the time"> A little of the time</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="None of the time"> None of the time</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>11.a. I seem to get sick a littl</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely true"> Definitely true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly true"> Mostly true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value=""> </label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly false"> Mostly false</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely false"> Definitely false</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>11.b. I am as healthy as anyone</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely true"> Definitely true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly true"> Mostly true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value=""> </label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly false"> Mostly false</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely false"> Definitely false</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>11.c. I expect my health to get</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely true"> Definitely true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly true"> Mostly true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value=""> </label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly false"> Mostly false</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely false"> Definitely false</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>11.d. My health is excellent</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely true"> Definitely true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly true"> Mostly true</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value=""> </label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Mostly false"> Mostly false</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Definitely false"> Definitely false</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-wpai_ans" role="tabpanel" aria-labelledby="formoid-wpai_ans-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Work Productivity and Activity Impairment: Anemic Symptoms</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date of assessment</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>1. Are you currently employed (w</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="NO"> NO</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="YES"> YES</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>2. During the past seven days, h</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>3. During the past seven days, h</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>4. During the past seven days, h</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>5. During the past seven days, h</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>6. During the past seven days, h</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                                                        </tbody>
+                </table>
+                </div>
+            </div>
+                
+    </div>
+
+<script>
+    $(document).ready(function(){
+        // Initialize Bootstrap tabs
+        $('#formTabs a').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+
+<script>
+$(document).ready(function() {
+    $("button.crf-sdtm-anno-toggle").click(function() {
+        // If the element to toggle is not the next sibling, adjust the selector accordingly.
+        // For example, if it's a child, use $(this).find(".crf-sdtm-anno-toggle").toggle();
+        // If it's elsewhere, you might need a more specific selector based on your HTML structure.
+        $(this).next(".crf-sdtm-anno-toggle").toggle();
+    });
+});
+</script>

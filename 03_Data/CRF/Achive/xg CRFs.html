@@ -1,0 +1,286 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG9C02THQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-GG9C02THQ7");
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xg CRFs </title>
+    <link rel="stylesheet" href="./styles/mycsg.css">
+    <script src="./scripts/mycsg.js"></script>   
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.3/js/dataTables.fixedColumns.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.2.2/css/fixedHeader.dataTables.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    
+    <link rel="stylesheet" type="text/css" href="./styles/prism.css">
+    <script src="./scripts/prism.js" data-manual></script> 
+    <script src="./vendor/tinymce/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+   tinymce.init({
+     selector: '.myeditablelessondiv',
+     plugins: 'table autoresize autosave codesample preview wordcount code emoticons link image lists advlist media insertdatetime template visualblocks help',
+     toolbar: 'template | undo redo | styles | hr | forecolor backcolor | bold italic | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | link image media| code | visualblocks'
+   });
+ </script>
+    <style>
+   
+    .resizeable-column {
+      resize: horizontal; /* Allow the user to resize horizontally */
+      overflow: auto; /* Add scrollbars if the content overflows */
+    }
+        
+		.frame {
+			height: 500px; /* adjust height as needed */
+			   
+    hr { 
+      margin: 0em;
+    } 
+
+    input[type="radio"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+      margin: 10;
+    }
+
+    input[type="checkbox"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+    }
+        
+    .answer_explanation_toggle_wrapper    
+    {
+            
+    }    
+    #answer_explanation 
+    {
+        margin-top: 0px;  
+        margin-bottom: 30px; 
+        background: gray;
+        width: auto; height: 50px;
+    }
+    .buttontags {
+      border-radius: 100px; /* Adjust the value to control the roundness of the corners */
+      opacity: 0.1; /* Adjust the value to control the greyed-out appearance */
+      pointer-events: none; /* Disable pointer events to make the button non-clickable */
+    }
+
+    <style>
+  /* Custom striped table colors */
+  .table-striped-concepts tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Light gray color */
+  }
+  
+  .table-striped-concepts tbody tr:nth-of-type(even) {
+    background-color: goldenyellow; /* Dark gray color */
+  }
+</style>
+
+    </style>
+
+    <script>
+    $( "button.crf-sdtm-anno-toggle" ).click(function() {
+       $( this ).next(".crf-sdtm-anno-toggle").toggle();     
+    
+    });
+        </script>   
+</head>
+<body>
+
+<div class="container-fluid sticky-top m-0 p-0">
+  <div class="row h-5 p-0 m-0 d-flex-row">
+    <div class="col-12 bg-dark p-0 m-0">
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-0 px-3 m-0">
+    <a class="navbar-brand" href="index.php">mycsg.in</a>
+    <button class="navbar-toggler center" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+      
+    <!-- <li class="nav-item">	<a class="nav-link" href="posts_display.php ">Posts</a></li>  -->
+    <li class="nav-item">   <a class="nav-link" href="sas.php ">SAS</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="sasnr.php ">SASnR</a>  </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="clinicalProgrammingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Clinical Programming
+        </a>
+        <div class="dropdown-menu" aria-labelledby="clinicalProgrammingDropdown">
+        <a class="dropdown-item" href="crfs.php">CRFs</a>
+        <a class="dropdown-item" href="sdtm.php">SDTM</a>
+        <a class="dropdown-item" href="adam.php">ADaM</a>
+        <a class="dropdown-item" href="tfl.php">TFL</a>
+        <a class="dropdown-item" href="tasks.php">Tasks</a>  
+        <a class="dropdown-item" href="macros.php">Macros</a> 
+              
+        </div>
+    </li>
+    <li class="nav-item">   <a class="nav-link" href="qna.php ">QnA</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="quiz.php ">Certification</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="resources.php ">Resources</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="disclaimer.php ">Disclaimer</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="contact us.php ">Contact Us</a>  </li> 
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center justify-content-start" href="training.php">
+        <span>Training</span>
+        <span class="badge badge-danger ml-1">2</span>
+      </a>
+    </li>
+
+    
+    </ul>
+    <ul class="nav navbar-nav navbar-right ml-auto">
+    
+        <li class="nav-item">
+            <a class="nav-link">Hi Daniel355!</a>
+        </li> 
+
+        
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">Log out</a>
+      </li> 
+      </ul>
+    </div>
+    </div>
+    </nav>
+    
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="container " >
+            <h2 class="text-center">Example Case Report Forms for XG domain</h2>
+    
+        <!-- Nav tabs -->
+    <ul class="nav nav-tabs" style="background-color:  #ccffe6;" id="formTabs" role="tablist">
+                    <li class="nav-item">
+                <a class="nav-link active" id="formoid-cust_blood_gluc-tab" data-toggle="tab" href="#formoid-cust_blood_gluc" role="tab" aria-controls="formoid-cust_blood_gluc" aria-selected="true">
+                    Ex 1: cust_blood_gluc                </a>
+            </li>
+            </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+                    <div class="tab-pane fade show active" id="formoid-cust_blood_gluc" role="tabpanel" aria-labelledby="formoid-cust_blood_gluc-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: blood glucose reading as a custom domain</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                    <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Blood Glucose Monitoring Date</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>XG.XGDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Unit of measurement</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Milligram per deciliter"> Milligram per deciliter</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Millimole per liter"> Millimole per liter</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"XG.XGORRESU when XG.XGTESTCD=""BGLUC"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Timepoint</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Pre-morning meal (Fasting)"> Pre-morning meal (Fasting)</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="2 Hours After Morning Meal"> 2 Hours After Morning Meal</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Pre-Mid-Day Meal"> Pre-Mid-Day Meal</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="2 Hours After Mid-Day Meal"> 2 Hours After Mid-Day Meal</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Pre-Evening Meal"> Pre-Evening Meal</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="2 Hours After Evening Meal"> 2 Hours After Evening Meal</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Bedtime"> Bedtime</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>XG.XGTPT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Blood Glucose Concentration Measured?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>XG.XGSTAT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>If measured, what was the blood glucose concentration</td>
+                                    <td><input type="text" name="">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"XG.XGORRES when XG.XGTESTCD=""BGLUC"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"XG.XGCAT=""BLOOD GLUCOSE READING"""</p></td>
+                                </tr>
+                                                                        </tbody>
+                </table>
+                </div>
+            </div>
+                
+    </div>
+
+<script>
+    $(document).ready(function(){
+        // Initialize Bootstrap tabs
+        $('#formTabs a').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+
+<script>
+$(document).ready(function() {
+    $("button.crf-sdtm-anno-toggle").click(function() {
+        // If the element to toggle is not the next sibling, adjust the selector accordingly.
+        // For example, if it's a child, use $(this).find(".crf-sdtm-anno-toggle").toggle();
+        // If it's elsewhere, you might need a more specific selector based on your HTML structure.
+        $(this).next(".crf-sdtm-anno-toggle").toggle();
+    });
+});
+</script>

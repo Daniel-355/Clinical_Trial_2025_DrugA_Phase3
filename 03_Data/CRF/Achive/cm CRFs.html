@@ -1,0 +1,508 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG9C02THQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-GG9C02THQ7");
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm CRFs </title>
+    <link rel="stylesheet" href="./styles/mycsg.css">
+    <script src="./scripts/mycsg.js"></script>   
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.3/js/dataTables.fixedColumns.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.2.2/css/fixedHeader.dataTables.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    
+    <link rel="stylesheet" type="text/css" href="./styles/prism.css">
+    <script src="./scripts/prism.js" data-manual></script> 
+    <script src="./vendor/tinymce/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+   tinymce.init({
+     selector: '.myeditablelessondiv',
+     plugins: 'table autoresize autosave codesample preview wordcount code emoticons link image lists advlist media insertdatetime template visualblocks help',
+     toolbar: 'template | undo redo | styles | hr | forecolor backcolor | bold italic | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | link image media| code | visualblocks'
+   });
+ </script>
+    <style>
+   
+    .resizeable-column {
+      resize: horizontal; /* Allow the user to resize horizontally */
+      overflow: auto; /* Add scrollbars if the content overflows */
+    }
+        
+		.frame {
+			height: 500px; /* adjust height as needed */
+			   
+    hr { 
+      margin: 0em;
+    } 
+
+    input[type="radio"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+      margin: 10;
+    }
+
+    input[type="checkbox"] {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+      transform: scale(1.5);
+    }
+        
+    .answer_explanation_toggle_wrapper    
+    {
+            
+    }    
+    #answer_explanation 
+    {
+        margin-top: 0px;  
+        margin-bottom: 30px; 
+        background: gray;
+        width: auto; height: 50px;
+    }
+    .buttontags {
+      border-radius: 100px; /* Adjust the value to control the roundness of the corners */
+      opacity: 0.1; /* Adjust the value to control the greyed-out appearance */
+      pointer-events: none; /* Disable pointer events to make the button non-clickable */
+    }
+
+    <style>
+  /* Custom striped table colors */
+  .table-striped-concepts tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Light gray color */
+  }
+  
+  .table-striped-concepts tbody tr:nth-of-type(even) {
+    background-color: goldenyellow; /* Dark gray color */
+  }
+</style>
+
+    </style>
+
+    <script>
+    $( "button.crf-sdtm-anno-toggle" ).click(function() {
+       $( this ).next(".crf-sdtm-anno-toggle").toggle();     
+    
+    });
+        </script>   
+</head>
+<body>
+
+<div class="container-fluid sticky-top m-0 p-0">
+  <div class="row h-5 p-0 m-0 d-flex-row">
+    <div class="col-12 bg-dark p-0 m-0">
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-0 px-3 m-0">
+    <a class="navbar-brand" href="index.php">mycsg.in</a>
+    <button class="navbar-toggler center" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+      
+    <!-- <li class="nav-item">	<a class="nav-link" href="posts_display.php ">Posts</a></li>  -->
+    <li class="nav-item">   <a class="nav-link" href="sas.php ">SAS</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="sasnr.php ">SASnR</a>  </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="clinicalProgrammingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Clinical Programming
+        </a>
+        <div class="dropdown-menu" aria-labelledby="clinicalProgrammingDropdown">
+        <a class="dropdown-item" href="crfs.php">CRFs</a>
+        <a class="dropdown-item" href="sdtm.php">SDTM</a>
+        <a class="dropdown-item" href="adam.php">ADaM</a>
+        <a class="dropdown-item" href="tfl.php">TFL</a>
+        <a class="dropdown-item" href="tasks.php">Tasks</a>  
+        <a class="dropdown-item" href="macros.php">Macros</a> 
+              
+        </div>
+    </li>
+    <li class="nav-item">   <a class="nav-link" href="qna.php ">QnA</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="quiz.php ">Certification</a>  </li>
+    <li class="nav-item">   <a class="nav-link" href="resources.php ">Resources</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="disclaimer.php ">Disclaimer</a>  </li> 
+    <li class="nav-item">   <a class="nav-link" href="contact us.php ">Contact Us</a>  </li> 
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center justify-content-start" href="training.php">
+        <span>Training</span>
+        <span class="badge badge-danger ml-1">2</span>
+      </a>
+    </li>
+
+    
+    </ul>
+    <ul class="nav navbar-nav navbar-right ml-auto">
+    
+        <li class="nav-item">
+            <a class="nav-link">Hi Daniel355!</a>
+        </li> 
+
+        
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">Log out</a>
+      </li> 
+      </ul>
+    </div>
+    </div>
+    </nav>
+    
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="container " >
+            <h2 class="text-center">Example Case Report Forms for CM domain</h2>
+    
+        <!-- Nav tabs -->
+    <ul class="nav nav-tabs" style="background-color:  #ccffe6;" id="formTabs" role="tablist">
+                    <li class="nav-item">
+                <a class="nav-link active" id="formoid-cm801_1-tab" data-toggle="tab" href="#formoid-cm801_1" role="tab" aria-controls="formoid-cm801_1" aria-selected="true">
+                    Ex 1: cm801_1                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-cm801_2-tab" data-toggle="tab" href="#formoid-cm801_2" role="tab" aria-controls="formoid-cm801_2" aria-selected="false">
+                    Ex 2: cm801_2                </a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link " id="formoid-conmeds-tab" data-toggle="tab" href="#formoid-conmeds" role="tab" aria-controls="formoid-conmeds" aria-selected="false">
+                    Ex 3: conmeds                </a>
+            </li>
+            </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+                    <div class="tab-pane fade show active" id="formoid-cm801_1" role="tabpanel" aria-labelledby="formoid-cm801_1-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Anti-hyperglycemic agents</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                    <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Collection Date</td>
+                                    <td><input type="text" name="cm801_1.CMDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Did the subject take any anti-hyperglycemic agent in the last 10 years?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMOCCUR" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMOCCUR" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>"CMTRT=""ANTI-HYPERGLYCEMIC"" <br/>CM.CMOCCUR<br/> CM.CMPRESP=""Y"" <br/> CM.CMEVLINT=""-P10Y"""</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>If yes, List the Treatments received</td>
+                                    <td><input type="text" name=""></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Treatment Name</td>
+                                    <td><input type="text" name="cm801_1.CMTRT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMTRT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Start Date</td>
+                                    <td><input type="text" name="cm801_1.CMSTDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Ongoing?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMONGO" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMONGO" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMENRTPT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>End Date</td>
+                                    <td><input type="text" name="cm801_1.CMENDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMENDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dose</td>
+                                    <td><input type="text" name="cm801_1.CMDOSE">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSE</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dose Unit</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSU" value="mg"> mg</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSU" value="ug"> ug</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSU" value="mL"> mL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSU" value="g"> g</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSU" value="IU"> IU</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSU</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Frequency</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSFRQ" value="BID"> BID</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSFRQ" value="TID"> TID</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSFRQ" value="QID"> QID</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSFRQ" value="QOD"> QOD</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSFRQ" value="QM"> QM</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSFRQ" value="PRN"> PRN</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMDOSFRQ" value="UNKNOWN"> UNKNOWN</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSFRQ</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Route</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="ORAL"> ORAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="TOPICAL"> TOPICAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="SUBCUTANEOUS"> SUBCUTANEOUS</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="TRANSDERMAL"> TRANSDERMAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="INTRAOCULAR"> INTRAOCULAR</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="INTRAMUSCULAR"> INTRAMUSCULAR</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="RESPIRATORY (INHALATION)"> RESPIRATORY (INHALATION)</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="INTRAPERITONIAL"> INTRAPERITONIAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="NASAL"> NASAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_1.CMROUTE" value="RECTAL"> RECTAL</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMROUTE</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-cm801_2" role="tabpanel" aria-labelledby="formoid-cm801_2-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: General Concomitant Medications</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Treatment Name</td>
+                                    <td><input type="text" name="cm801_2.CMTRT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMTRT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Taken prior to the study?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMPRIOR" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMPRIOR" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>SUPPCM.CMPRIOR</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Indication</td>
+                                    <td><input type="text" name="cm801_2.CMINDC">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMINDC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Start Date</td>
+                                    <td><input type="text" name="cm801_2.CMSTDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Ongoing?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMONGO" value="Yes"> Yes</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMONGO" value="No"> No</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMENRTPT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>End Date</td>
+                                    <td><input type="text" name="cm801_2.CMENDAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMENDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dose</td>
+                                    <td><input type="text" name="cm801_2.CMDOSE">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSE</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dose Unit</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSU" value="mg"> mg</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSU" value="ug"> ug</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSU" value="mL"> mL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSU" value="g"> g</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSU" value="IU"> IU</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSU</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Frequency</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSFRQ" value="BID"> BID</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSFRQ" value="TID"> TID</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSFRQ" value="QID"> QID</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSFRQ" value="QOD"> QOD</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSFRQ" value="QM"> QM</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSFRQ" value="PRN"> PRN</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMDOSFRQ" value="UNKNOWN"> UNKNOWN</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSFRQ</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Route</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="ORAL"> ORAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="TOPICAL"> TOPICAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="SUBCUTANEOUS"> SUBCUTANEOUS</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="TRANSDERMAL"> TRANSDERMAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="INTRAOCULAR"> INTRAOCULAR</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="INTRAMUSCULAR"> INTRAMUSCULAR</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="RESPIRATORY (INHALATION)"> RESPIRATORY (INHALATION)</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="INTRAPERITONIAL"> INTRAPERITONIAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="NASAL"> NASAL</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="cm801_2.CMROUTE" value="RECTAL"> RECTAL</label><br>
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMROUTE</p></td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </tbody>
+                </table>
+                </div>
+            </div>
+                    <div class="tab-pane fade " id="formoid-conmeds" role="tabpanel" aria-labelledby="formoid-conmeds-tab">
+                <!-- Display data for this formoid -->
+                 <br>
+                <div class="text-center bg-success text-white align-middle">
+                    <p class='p-1 m-0' >Form: Concomitant Medications</p>                </div>
+                <div  style="height: 78vh; overflow-y: scroll; padding: 20px; box-sizing: border-box;">
+                <table class="table table-sm">
+                    <thead class="bg-primary">
+                        <tr>
+                            <!-- Define table headers explicitly -->
+                            <th>Question</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Medication category</td>
+                                    <td><input type="text" name="conmeds.CMCAT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMCAT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Medication</td>
+                                    <td><input type="text" name="conmeds.CMVT">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMTRT</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Taken prior to study?</td>
+                                    <td><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="No"> No</label><br><label class="m-0 p-0"><input class="m-0 p-0" type="radio" name="" value="Yes"> Yes</label><br></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date First Taken</td>
+                                    <td><input type="text" name="conmeds.CMSTDT_RAW">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMSTDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Date Last Taken</td>
+                                    <td><input type="text" name="conmeds.CMENDT_RAW">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMENDTC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Indication</td>
+                                    <td><input type="text" name="conmeds.CMINDC">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMINDC</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Dose</td>
+                                    <td><input type="text" name="conmeds.CMDOSE_RAW">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSE</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Unit</td>
+                                    <td><input type="text" name="conmeds.CMDOSEU_RAW">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSU</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Frequency</td>
+                                    <td><input type="text" name="conmeds.CMDOSFRQ">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMDOSFRQ</p></td>
+                                </tr>
+                                                                                                                <tr>
+                                    <!-- Display only specified keys -->
+                                    <td>Route</td>
+                                    <td><input type="text" name="conmeds.ROUTE">
+        <button class='crf-sdtm-anno-toggle btn btn-sm btn-light'>Toggle annotation</button>
+        <p class='crf-sdtm-anno-toggle '  style='color:red;border:1px;font-family:Courier New; display:none;'>CM.CMROUTE</p></td>
+                                </tr>
+                                                                        </tbody>
+                </table>
+                </div>
+            </div>
+                
+    </div>
+
+<script>
+    $(document).ready(function(){
+        // Initialize Bootstrap tabs
+        $('#formTabs a').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+
+<script>
+$(document).ready(function() {
+    $("button.crf-sdtm-anno-toggle").click(function() {
+        // If the element to toggle is not the next sibling, adjust the selector accordingly.
+        // For example, if it's a child, use $(this).find(".crf-sdtm-anno-toggle").toggle();
+        // If it's elsewhere, you might need a more specific selector based on your HTML structure.
+        $(this).next(".crf-sdtm-anno-toggle").toggle();
+    });
+});
+</script>
